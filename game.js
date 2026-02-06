@@ -1,4 +1,5 @@
 
+
 var Module;
 
 if (typeof Module === 'undefined') Module = eval('(function() { try { return Module || {} } catch(e) { return {} } })()');
@@ -20,8 +21,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'game.data';
-    var REMOTE_PACKAGE_BASE = 'game.data';
+    var PACKAGE_NAME = 'game.love';
+    var REMOTE_PACKAGE_BASE = 'game.love';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -235,10 +236,10 @@ Module.expectedDataFileDownloads++;
         for (i = 0; i < files.length; ++i) {
           DataRequest.prototype.requests[files[i].filename].onload();
         }
-        Module['removeRunDependency']('datafile_game.data');
+        Module['removeRunDependency']('datafile_game.love');
 
       };
-      Module['addRunDependency']('datafile_game.data');
+      Module['addRunDependency']('datafile_game.love');
 
       if (!Module.preloadResults) Module.preloadResults = {};
 
