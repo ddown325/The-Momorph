@@ -1,6 +1,4 @@
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<!doctype html>
+<!doctype html>
 <html lang="en-us">
 <base href="https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/MISC/thermomorph/">
   <head>
@@ -116,9 +114,7 @@
         monitorRunDependencies: function(left) {
           this.remainingDependencies = left;
           this.totalDependencies = Math.max(this.totalDependencies, left);
-          Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'Al
-100  4954  100  4954    0     0  42228      0 --:--:-- --:--:-- --:--:-- 42341
-l downloads complete.');
+          Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
         }
       };
       Module.setStatus('Downloading...');
